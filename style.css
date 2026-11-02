@@ -1,0 +1,122 @@
+
+/* MK Wilson Portfolio - Milestone 2 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background-color: #f0f4f8;
+  color: #263238;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #245b78;
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin: 0 0 16px;
+}
+
+h2 {
+  color: #245b78;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 32px auto;
+}
+
+section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 2px solid #dce6ec;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+article {
+  background-color: #e8f4f6;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#featured-project {
+  border-left: 5px solid #e8a04b;
+}
+
+a {
+  color: #176c86;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #245b78;
+  color: white;
+  border-radius: 12px;
+}
+
+/* Tablet layout */
+@media (min-width: 600px) {
+  body {
+    padding: 24px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 1000px) {
+  body {
+    padding: 32px;
+  }
+
+  header {
+    padding: 32px;
+  }
+
+  main {
+    gap: 32px;
+  }
+}
