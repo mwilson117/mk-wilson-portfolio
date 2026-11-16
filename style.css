@@ -127,3 +127,79 @@ footer {
   border-top: 5px solid #176c86;
 }
 
+/* Accessible Contact Form */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 2px solid #245b78;
+  border-radius: 6px;
+  font: inherit;
+  color: #222222;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 3px solid #b36b16;
+  outline-offset: 2px;
+}
+
+.form-group [aria-invalid="true"] {
+  border-color: #a12626;
+}
+
+.error-message {
+  color: #a12626;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+fieldset {
+  border: 1px solid #245b78;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: 700;
+}
+
+#contact-form button {
+  background-color: #245b78;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#contact-form button:focus-visible {
+  outline: 3px solid #b36b16;
+  outline-offset: 3px;
+}
+
+#form-status {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+
