@@ -94,5 +94,68 @@
   <footer>
     <p>&copy; 2026 MK Wilson</p>
   </footer>
+ 
+
+  <script>
+    // Your form validation JavaScript goes here.
+
+<script>
+  const form = document.getElementById("contact-form");
+  const fields = ["name", "email", "message"];
+
+  function validateField(field) {
+    const input = document.getElementById(field);
+    const error = document.getElementById(field + "-error");
+    let message = "";
+
+    if (!input.value.trim()) {
+      message = "Please enter your " +
+        (field === "name" ? "name." :
+         field === "email" ? "email address." :
+         "message.");
+    } else if (field === "email" && !input.validity.valid) {
+      message = "Please enter a valid email address.";
+    }
+
+    error.textContent = message;
+
+    if (message) {
+      input.setAttribute("aria-invalid", "true");
+    } else {
+      input.removeAttribute("aria-invalid");
+    }
+
+    return !message;
+  }
+
+  fields.forEach(function(field) {
+    document.getElementById(field).addEventListener("blur", function() {
+      validateField(field);
+    });
+  });
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let firstInvalid = null;
+
+    fields.forEach(function(field) {
+      if (!validateField(field) && !firstInvalid) {
+        firstInvalid = document.getElementById(field);
+      }
+    });
+
+    const status = document.getElementById("form-status");
+
+    if (firstInvalid) {
+      status.textContent = "Please correct the errors in the form.";
+      firstInvalid.focus();
+    } else {
+      status.textContent =
+        "Form completed successfully. This is a demonstration form; no message was sent.";
+    }
+  });
+</script>
 </body>
+</html>
 </html>
